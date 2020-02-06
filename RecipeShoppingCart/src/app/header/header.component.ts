@@ -7,7 +7,7 @@ import {Component, EventEmitter, Output} from '@angular/core';
 export class HeaderComponent {
 
 
-  @Output('nav') navigation = new EventEmitter<string>();
+  @Output('navigate') navigation = new EventEmitter<string>();
 
   onRecipes() {
      this.navigation.emit('recipe');
