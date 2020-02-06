@@ -1,9 +1,20 @@
-import {Component} from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html'
 })
 export class HeaderComponent {
+
+
+  @Output('nav') navigation = new EventEmitter<string>();
+
+  onRecipes() {
+     this.navigation.emit('recipe');
+  }
+
+  onShopping() {
+    this.navigation.emit( 'shopping');
+  }
 
 }
